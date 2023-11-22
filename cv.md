@@ -23,3 +23,11 @@ describe("Multiply", () => {
   });
 }); 
 ```
+## *Education*
+* 2017 Belarusian National Technical University
+  * Master of Technical Sciences
+* 2015 Belarusian National Technical University 
+  *  Power Engineer
+## *English*
+B1 in progress
+
