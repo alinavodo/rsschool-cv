@@ -1,4 +1,274 @@
-body{
-    background-color: aliceblue;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:wght@400;500;700;800&display=swap');
+
+:root {
+    --black: #171718;
+    --black-border: #26292D;
+    --white: white;
+    --purple: #5C62EC;
+
+    --text-color: var(--black);
+    --dark-background: var(--black);
+    --dark-border: var(--black-border);
+    --header-text: var(--white);
+    --accent: var(--purple);
 }
+
+html, body, h1 {
+    width: 100%;
+    scroll-behavior: smooth; 
+    font-family: "DM Sans", sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+    letter-spacing: -0.5px;
+    color: var(--text-color);
+}
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+/*Header*/
+
+.header {
+    margin: 0;
+    color: var(--header-text);
+    background-color: var(--dark-background);
+    padding: 20px 0px;
+    border-bottom: 1px solid var(--black-border);
+    letter-spacing: normal;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0px 15px;
+}
+
+ .header-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+} 
+
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500px;
+}
+
+
+.nav-list__link {
+    color: var(--header-text);
+    transition: opacity 0.1s ease-in-out;
+}
+
+.nav-list__link:hover {
+    opacity: 0.8;
+}
+
+.nav-list__link-active {
+    position: relative;
+}
+
+.nav-list__link-active::before {
+    content: "";
+    position:absolute;
+    left:0;
+    top: 100%;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+/*Main*/
+
+/*Information*/
+
+.information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 895px;
+    background-color: var(--dark-background);
+    color: var(--header-text);
+
+}
+
+.information-container {
+    text-align: center;
+    max-width: 630px;
+}
+
+.information-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--header-text);
+    margin-bottom: 20px;
+    margin-top: -50px;
+}
+
+.information-title strong{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.information-title em{
+    font-style: normal;
+    color: var(--accent);
+}
+
+.information-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 12px 28px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: var(--accent);
+    color: var(--white);
+    letter-spacing: 0.15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/*Projects*/
+
+.projects {
+    padding: 70px 0;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--accent);
+}
+
+.project-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.project-item {
+    max-width: 370px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+.project-img {
+    max-width: 370px;
+    border-radius: 10px;
+}
+
+.project-title {
+    padding: 15px 20px 25px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #171718;
+}
+
+/*Skills*/
+
+.skills-items {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    gap: 30px;
+}
+
+
+/*Education*/
+
+.education-item {
+    color: var(--accent);
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 25px;
+} 
+
+
+.list {
+    margin-left: 25px;
+    color: #26292D;
+    font-size: 24px;
+    list-style:  inside;
+}
+
+
+/*Code*/
+
+.cod{
+    font-size: 18px;
+    margin-left: 35px; 
+}
+
+
+/*Footer*/
+
+.footer {
+    margin-top: 25px;
+    padding: 40px;
+    background-color: var(--dark-background);
+    color: var(--header-text);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-item img{
+    height: 39px;
+}
+
+.social-item {
+    color: var(--accent);
+    font-size: 30px;
+}
+
+ul {
+    padding: 0;
+}
+
 
